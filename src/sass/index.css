@@ -13,13 +13,30 @@ html {
 }
 
 .header {
-  padding: 30px 0px;
+  padding: 30px;
+}
+@media (max-width: 276px) {
+  .header {
+    padding: 15px;
+  }
 }
 
 .header__wrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  flex-wrap: wrap;
+}
+@media (max-width: 1052px) {
+  .header__wrapper {
+    flex-direction: column;
+    gap: 20px 0px;
+  }
+}
+@media (max-width: 276px) {
+  .header__wrapper {
+    gap: 30px 0px;
+  }
 }
 
 .header__icon {
@@ -27,6 +44,11 @@ html {
   flex-direction: row;
   justify-content: space-between;
   gap: 0 15px;
+}
+@media (max-width: 1052px) {
+  .header__icon {
+    justify-content: flex-start;
+  }
 }
 
 .header__img {
@@ -48,6 +70,11 @@ html {
   font-size: 2.4rem;
   text-transform: uppercase;
 }
+@media (max-width: 276px) {
+  .header__title {
+    font-size: 2rem;
+  }
+}
 
 .header__btns, .header__languages {
   display: flex;
@@ -55,11 +82,21 @@ html {
   justify-content: space-between;
   gap: 0 15px;
 }
+@media (max-width: 1052px) {
+  .header__btns, .header__languages {
+    flex-direction: column;
+  }
+}
+@media (max-width: 276px) {
+  .header__btns, .header__languages {
+    gap: 5px 0px;
+  }
+}
 
 .btn {
   padding: 15px 30px;
+  background-color: #ffffff;
   font-size: 2.6rem;
-  background-size: 0% 0%;
   font-weight: 600;
   word-spacing: normal;
   text-transform: uppercase;
@@ -67,14 +104,34 @@ html {
   cursor: pointer;
   transition: 0.3s all;
 }
+@media (max-width: 376px) {
+  .btn {
+    font-size: 1.7rem;
+  }
+}
+@media (max-width: 276px) {
+  .btn {
+    font-size: 1.4rem;
+  }
+}
 
 .btn:hover {
   background-color: #ecca58;
   transition: 0.3s all;
 }
+@media (max-width: 767px) {
+  .btn:hover {
+    background-color: #ffffff;
+  }
+}
 
 .footer {
-  padding: 30px 0px;
+  padding: 30px;
+}
+@media (max-width: 376px) {
+  .footer {
+    padding: 15px;
+  }
 }
 
 .wrapper__footer {
@@ -84,30 +141,79 @@ html {
   gap: 0 5%;
   align-items: center;
 }
+@media (max-width: 767px) {
+  .wrapper__footer {
+    justify-content: center;
+  }
+}
 
 .footer__item {
   font-size: 2.5rem;
   font-weight: 600;
   color: #df8d31;
 }
+@media (max-width: 376px) {
+  .footer__item {
+    font-size: 1.7rem;
+  }
+}
 
 .footer__link {
   margin-top: -10px;
+}
+@media (max-width: 376px) {
+  .footer__link {
+    margin-top: 0px;
+  }
 }
 
 .footer__githab {
   width: 40px;
   height: 40px;
 }
+@media (max-width: 376px) {
+  .footer__githab {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+@media (max-width: 376px) {
+  .footer__RS {
+    width: 40px;
+    height: 40px;
+  }
+}
 
 .quiz {
   padding: 120px 0px 50px 0px;
+}
+@media (max-width: 1052px) {
+  .quiz {
+    padding: 120px 30px 50px 30px;
+  }
+}
+@media (max-width: 767px) {
+  .quiz {
+    padding: 30px 30px 50px 30px;
+  }
+}
+@media (max-width: 276px) {
+  .quiz {
+    padding: 15px;
+  }
 }
 
 .wrapper__quiz {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+}
+@media (max-width: 767px) {
+  .wrapper__quiz {
+    flex-direction: column;
+    gap: 20px 0px;
+  }
 }
 
 .quiz__imgs {
@@ -120,10 +226,46 @@ html {
   background-position: 55px 50px;
   border-radius: 50%;
 }
+@media (max-width: 767px) {
+  .quiz__imgs {
+    margin: auto;
+  }
+}
+@media (max-width: 475px) {
+  .quiz__imgs {
+    width: 280px;
+    height: 280px;
+    background-size: 280px 280px;
+  }
+}
+@media (max-width: 376px) {
+  .quiz__imgs {
+    width: 220px;
+    height: 220px;
+    background-size: 220px 220px;
+  }
+}
+@media (max-width: 276px) {
+  .quiz__imgs {
+    width: 150px;
+    height: 150px;
+    background-size: 150px 150px;
+  }
+}
 
 .quiz__desk {
   width: 400px;
   align-self: center;
+}
+@media (max-width: 376px) {
+  .quiz__desk {
+    width: 250px;
+  }
+}
+@media (max-width: 276px) {
+  .quiz__desk {
+    width: 180px;
+  }
 }
 
 .quiz__text {
@@ -132,6 +274,21 @@ html {
   font-weight: 600;
   color: #ffffff;
   text-transform: uppercase;
+}
+@media (max-width: 475px) {
+  .quiz__text {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 475px) {
+  .quiz__text {
+    text-align: center;
+  }
+}
+@media (max-width: 276px) {
+  .quiz__text {
+    font-size: 1.5rem;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

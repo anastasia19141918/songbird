@@ -1,7 +1,8 @@
 .btn {
   padding: 15px 30px;
+
+  background-color: $color-text;
   font-size: 2.6rem;
-  background-size: 0% 0%;
   font-weight: 600;
   word-spacing: normal;
   text-transform: uppercase;
@@ -9,10 +10,18 @@
   cursor: pointer;
   
   transition: .3s all;
+  @include media-mobale {
+    font-size: 1.7rem;
+  }
+  @include media-mobale-small {
+    font-size: 1.4rem;
+  }
 }
 
 .btn:hover {
-  
   background-color: #ecca58;
   transition: .3s all;
+  @include media-taplet {
+    background-color: $color-text;
+  }
 }
