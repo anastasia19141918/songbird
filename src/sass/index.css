@@ -1,3 +1,15 @@
 @import './normalize.css';
+html {
+  font-size: 10px;
+}
+
+.body {
+  background-color: #030303;
+}
+
+.wrapper {
+  max-width: 1440px;
+  margin: auto;
+}
 
 /*# sourceMappingURL=index.css.map */
