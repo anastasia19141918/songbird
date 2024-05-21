@@ -1,0 +1,33 @@
+.quiz {
+  padding: 120px 0px 50px 0px;
+}
+
+.wrapper__quiz {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.quiz__imgs {
+  width: 420px;
+  height: 420px;
+  background-color: $color-gvis;
+  background-image: url('../../src/img/result.png');
+  background-size: 420px 420px;
+  background-repeat: no-repeat;
+  background-position: 55px 50px;
+  border-radius: 50%;
+}
+
+.quiz__desk {
+  width: 400px;
+  align-self: center;
+}
+
+.quiz__text {
+  margin: 0;
+  font-size: 3.0rem;
+  font-weight: 600;
+  color: $color-text;
+  text-transform: uppercase;
+}

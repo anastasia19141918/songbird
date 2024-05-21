@@ -12,4 +12,126 @@ html {
   margin: auto;
 }
 
+.header {
+  padding: 30px 0px;
+}
+
+.header__wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.header__icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 0 15px;
+}
+
+.header__img {
+  width: 25px;
+  height: 25px;
+  padding: 10px;
+  background-image: url("../../src/img/icon.png");
+  background-color: #e1ceff;
+  background-size: 25px 25px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+}
+
+.header__title {
+  margin: 0;
+  align-self: center;
+  color: #e1ceff;
+  font-size: 2.4rem;
+  text-transform: uppercase;
+}
+
+.header__btns, .header__languages {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 0 15px;
+}
+
+.btn {
+  padding: 15px 30px;
+  font-size: 2.6rem;
+  background-size: 0% 0%;
+  font-weight: 600;
+  word-spacing: normal;
+  text-transform: uppercase;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s all;
+}
+
+.btn:hover {
+  background-color: #ecca58;
+  transition: 0.3s all;
+}
+
+.footer {
+  padding: 30px 0px;
+}
+
+.wrapper__footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 0 5%;
+  align-items: center;
+}
+
+.footer__item {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #df8d31;
+}
+
+.footer__link {
+  margin-top: -10px;
+}
+
+.footer__githab {
+  width: 40px;
+  height: 40px;
+}
+
+.quiz {
+  padding: 120px 0px 50px 0px;
+}
+
+.wrapper__quiz {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.quiz__imgs {
+  width: 420px;
+  height: 420px;
+  background-color: #ffbd76;
+  background-image: url("../../src/img/result.png");
+  background-size: 420px 420px;
+  background-repeat: no-repeat;
+  background-position: 55px 50px;
+  border-radius: 50%;
+}
+
+.quiz__desk {
+  width: 400px;
+  align-self: center;
+}
+
+.quiz__text {
+  margin: 0;
+  font-size: 3rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
 /*# sourceMappingURL=index.css.map */
