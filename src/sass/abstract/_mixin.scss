@@ -1,0 +1,19 @@
+@mixin media-desktop {
+  @media(max-width: $media-desktop) { @content }
+};
+
+@mixin media-taplet {
+  @media(max-width: $media-taplet) { @content }
+};
+
+@mixin media-mobale-big {
+  @media(max-width: $media-mobale-big) { @content }
+};
+
+@mixin media-mobale {
+  @media(max-width: $media-mobale) { @content }
+};
+
+@mixin  media-mobale-small {
+  @media(max-width: $media-mobale-small) { @content }
+}

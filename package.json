@@ -1,0 +1,20 @@
+{
+  "name": "songbird",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "style": "sass --watch src/sass/index.scss  src/sass/index.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anastasia19141918/songbird.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anastasia19141918/songbird/issues"
+  },
+  "homepage": "https://github.com/anastasia19141918/songbird#readme"
+}
