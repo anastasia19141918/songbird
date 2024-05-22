@@ -311,4 +311,33 @@ body {
   transition: 0.3s all;
 }
 
+.gallery {
+  padding: 120px 0px 20px;
+}
+
+.gallery__btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0 25px;
+}
+
+.gallery__btn {
+  text-transform: uppercase;
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #ffffff;
+  cursor: pointer;
+  transition: 0.4 all;
+}
+
+.gallery__btn:hover {
+  color: #df8d31;
+  transition: 0.4 all;
+}
+
+.gallery__btn__active {
+  color: #df8d31;
+}
+
 /*# sourceMappingURL=index.css.map */
