@@ -3,7 +3,7 @@ html {
   font-size: 10px;
 }
 
-.body {
+body {
   background-color: #030303;
 }
 
@@ -94,15 +94,21 @@ html {
 }
 
 .btn {
-  padding: 15px 30px;
+  padding: 5px 30px;
   background-color: #ffffff;
-  font-size: 2.6rem;
+  font-size: 1.8rem;
   font-weight: 600;
   word-spacing: normal;
   text-transform: uppercase;
   border-radius: 10px;
   cursor: pointer;
   transition: 0.3s all;
+}
+@media (max-width: 1052px) {
+  .btn {
+    padding: 15px 30px;
+    font-size: 2.6rem;
+  }
 }
 @media (max-width: 376px) {
   .btn {
@@ -289,6 +295,20 @@ html {
   .quiz__text {
     font-size: 1.5rem;
   }
+}
+
+.header-gallery__link {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #ffffff;
+  transition: 0.3s all;
+}
+
+.header-gallery__link:hover {
+  transform: scale(1.2);
+  transition: 0.3s all;
 }
 
 /*# sourceMappingURL=index.css.map */

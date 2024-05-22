@@ -1,14 +1,19 @@
 .btn {
-  padding: 15px 30px;
+  padding: 5px 30px;
 
   background-color: $color-text;
-  font-size: 2.6rem;
+  font-size: 1.8rem;
   font-weight: 600;
   word-spacing: normal;
   text-transform: uppercase;
   border-radius: 10px;
   cursor: pointer;
   
+  @include media-desktop {
+    padding: 15px 30px;
+    font-size: 2.6rem;
+  }
+
   transition: .3s all;
   @include media-mobale {
     font-size: 1.7rem;
@@ -17,6 +22,7 @@
     font-size: 1.4rem;
   }
 }
+
 
 .btn:hover {
   background-color: #ecca58;

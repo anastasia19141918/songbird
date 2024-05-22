@@ -1,0 +1,13 @@
+.header-gallery__link {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 2.0rem;
+  font-weight: 600;
+  color: $color-text;
+  transition: .3s all;
+}
+
+.header-gallery__link:hover {
+  transform: scale(1.2);
+  transition: .3s all;
+}
