@@ -4,7 +4,7 @@ html {
 }
 
 body {
-  background-color: #030303;
+  background-color: #12654c;
 }
 
 .wrapper {
@@ -144,7 +144,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  gap: 0 5%;
+  gap: 0 20px;
   align-items: center;
 }
 @media (max-width: 767px) {
@@ -154,7 +154,7 @@ body {
 }
 
 .footer__item {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 600;
   color: #df8d31;
 }
@@ -164,9 +164,6 @@ body {
   }
 }
 
-.footer__link {
-  margin-top: -10px;
-}
 @media (max-width: 376px) {
   .footer__link {
     margin-top: 0px;
@@ -174,8 +171,8 @@ body {
 }
 
 .footer__githab {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
 }
 @media (max-width: 376px) {
   .footer__githab {
@@ -184,6 +181,10 @@ body {
   }
 }
 
+.footer__RS {
+  width: 30px;
+  height: 30px;
+}
 @media (max-width: 376px) {
   .footer__RS {
     width: 40px;
