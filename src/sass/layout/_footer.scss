@@ -9,7 +9,7 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  gap: 0 5%;
+  gap: 0 20px;
   align-items: center;
   @include media-taplet {
     justify-content: center;
@@ -17,7 +17,7 @@
 }
 
 .footer__item {
-  font-size: 2.5rem;
+  font-size: 2.0rem;
   font-weight: 600;
   color: $color-footer;
   @include media-mobale {
@@ -26,15 +26,14 @@
 }
 
 .footer__link {
-  margin-top: -10px;
   @include media-mobale {
     margin-top: 0px;
   }
 }
 
 .footer__githab {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   @include media-mobale {
     width: 25px;
     height: 25px
@@ -42,6 +41,8 @@
 }
 
 .footer__RS {
+  width: 30px;
+  height: 30px;
   @include media-mobale {
     width: 40px;
     height: 40px
