@@ -654,4 +654,36 @@ body {
   cursor: pointer;
 }
 
+.game__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.game__title {
+  margin-bottom: 60px;
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: #df8d31;
+  text-align: right;
+}
+
+.game__btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0 30px;
+}
+
+.game__btn {
+  font-size: 2rem;
+  color: black;
+  background-image: linear-gradient(#2E9AFF, #ffb9d5);
+  padding: 20px 60px;
+  border-radius: 3px;
+}
+
+.game__btn__active {
+  background: #df8d31;
+}
+
 /*# sourceMappingURL=index.css.map */
