@@ -8,6 +8,8 @@ const galleryBtn = document.querySelectorAll('.gallery__btn');
 
 const galleryBlock = document.getElementById('gallery__itemns');
 
+const playBtn = document.getElementById('bird__play');
+
 const audio = new Audio;
 let isPlay = false;
 
@@ -27,7 +29,7 @@ galleryBtns.addEventListener('click', function(el){
     itemrandom(el);
   }
 })
-//birds
+//birds start
 
 function creatRandom() {
   itemCreat(birdsDataEn[2]);
@@ -74,12 +76,13 @@ function itemrandom(el) {
     itemCreat(birdsDataEn[2]);
   }
 }
+//birds end
 
 //creat gallery start
 creatRandom();
 
 function itemCreat(element) {
-  element.forEach(function(el){
+  element.forEach(function(el, index){
 
     let div = document.createElement('div');
     div.classList.add('bird');
@@ -183,15 +186,9 @@ function itemCreat(element) {
       setBar(e, divProgressBarBlock);
     })
     
-    divPlay.addEventListener('click', function(){
+    divPlay.addEventListener('click', function(e){
       playAudio(el, divPlay);
-
-      audio.addEventListener('timeupdate', function(e){
-        updateBar(e, divRanch);
-        timeProgressBar(progressBarCurrentTime, progressBarCurrentLength);
-      });
-
-     
+    
     });
 
     soundBtn.addEventListener('click', function(){
@@ -201,6 +198,13 @@ function itemCreat(element) {
     input.addEventListener('click', function(el){
       saundRahge(el, input, soundBtn);
     })
+
+    audio.addEventListener('timeupdate', function(el){
+      if(divPlay.classList.contains('bird__pause')) {
+        updateBar(el, divRanch);
+        timeProgressBar(progressBarCurrentTime, progressBarCurrentLength);
+      } 
+    });
   })
 };
 
@@ -246,10 +250,16 @@ function saundRahge(el, input, soundBtn) {
   }
 }
 
-function updateBar(e, divRanch) {
-  const {duration, currentTime} = e.srcElement;
+function updateBar(el, divRanch) {
+  const {duration, currentTime} = el.srcElement;
   const progressPresents = (currentTime / duration )* 100;
   divRanch.style.width = `${progressPresents}%`;
+}
+
+function timeProgressBar(progressBarCurrentTime, progressBarCurrentLength) {
+  progressBarCurrentTime.innerText = audioTime ();
+  progressBarCurrentLength.innerText = audioDuratio();
+  
 }
 
 function setBar(e, divProgressBarBlock) {
@@ -257,13 +267,6 @@ function setBar(e, divProgressBarBlock) {
   const clickBarX = e.offsetX;
   const durationbar = audio.duration;
   audio.currentTime = (clickBarX / width) * durationbar;
-}
-
-
-
-function timeProgressBar(progressBarCurrentTime, progressBarCurrentLength) {
-  progressBarCurrentTime.innerText = audioTime ();
-  progressBarCurrentLength.innerText = audioDuratio();
 }
 
 function audioDuratio () {
