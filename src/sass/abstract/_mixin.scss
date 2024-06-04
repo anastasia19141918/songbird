@@ -16,4 +16,38 @@
 
 @mixin  media-mobale-small {
   @media(max-width: $media-mobale-small) { @content }
-}
+};
+
+//media gallery
+
+@mixin media-desktop-gallery {
+  @media(max-width: $media-desktop-gallery) { @content }
+};
+
+@mixin media-desktop-gallery-small {
+  @media(max-width: $media-desktop-gallery-small) { @content }
+};
+
+@mixin media-taplet-gallery-big {
+  @media(max-width: $media-taplet-gallery-big) { @content }
+};
+
+@mixin media-taplet-gallery-small {
+  @media(max-width: $media-taplet-gallery-small) { @content }
+};
+
+@mixin media-taplet-gallery {
+  @media(max-width: $media-taplet-gallery) { @content }
+};
+
+@mixin media-mabale-gallery-big {
+  @media(max-width: $media-mabale-gallery-big) { @content }
+};
+
+@mixin media-mabale-gallery-small {
+  @media(max-width: $media-mabale-gallery-small) { @content }
+};
+
+@mixin media-mabale-gallery {
+  @media(max-width: $media-mabale-gallery) { @content }
+};
