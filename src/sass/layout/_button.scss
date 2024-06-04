@@ -1,12 +1,14 @@
 .btn {
-  padding: 5px 30px;
-
+  padding: 3px 15px;
+  
   background-color: $color-text;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 600;
   word-spacing: normal;
   text-transform: uppercase;
   border-radius: 10px;
+  color: black;
+  text-decoration: none;
   cursor: pointer;
   
   @include media-desktop {
@@ -23,6 +25,9 @@
   }
 }
 
+.header__play, .header__gallery {
+  padding-top: 15px;
+}
 
 .btn:hover {
   background-color: #ecca58;

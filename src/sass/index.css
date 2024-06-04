@@ -94,13 +94,15 @@ body {
 }
 
 .btn {
-  padding: 5px 30px;
+  padding: 3px 15px;
   background-color: #ffffff;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 600;
   word-spacing: normal;
   text-transform: uppercase;
   border-radius: 10px;
+  color: black;
+  text-decoration: none;
   cursor: pointer;
   transition: 0.3s all;
 }
@@ -119,6 +121,10 @@ body {
   .btn {
     font-size: 1.4rem;
   }
+}
+
+.header__play, .header__gallery {
+  padding-top: 15px;
 }
 
 .btn:hover {
@@ -413,7 +419,7 @@ body {
 .bird__pause {
   width: 30px;
   height: 30px;
-  background-image: url("/src/img/pause.svg");
+  background-image: url("../../src/img/pause.svg");
   background-size: 30px 30px;
   background-repeat: no-repeat;
   cursor: pointer;
