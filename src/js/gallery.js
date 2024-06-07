@@ -188,7 +188,6 @@ function itemCreat(element) {
     
     divPlay.addEventListener('click', function(e){
       playAudio(el, divPlay);
-    
     });
 
     soundBtn.addEventListener('click', function(){
@@ -225,7 +224,7 @@ function playAudio(el, divPlay) {
   }
 }
 
-function saundMusik(soundBtn) {
+function saundMusik (soundBtn) {
   audio.muted = !audio.muted;
   
   if(audio.muted) {
@@ -238,7 +237,7 @@ function saundMusik(soundBtn) {
   }
 }
 
-function saundRahge(el, input, soundBtn) {
+function saundRahge (el, input, soundBtn) {
   const value = el.target.value;
   input.style.background = `linear-gradient(to right, #CEAD78 0%, #CEAD78 ${value}%, #ffffff ${value}%, #ffffff 100%)`;
   if(value === input.min) {
