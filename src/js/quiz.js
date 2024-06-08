@@ -1,7 +1,10 @@
 import birdsDataEn from './dataEN.js';
 import birdsData from './dataRU.js';
+console.log(birdsDataEn[0]);
 
 const wrapper = document.getElementById('game__wrapper');
+const answerChoice = document.getElementById('answer__choice');
+const answerDesk =  document.getElementById('answer__desk');
 
 let questionIndex = 0; //текущий вопрос
 let scope = 0;//очки
@@ -15,12 +18,14 @@ function arrowQuestion() {
   let itemnsQuestion = birdsDataEn[0].map(function(el){
     return el;
   });
-  
   const randomIndex = Math.floor(Math.random() * (itemnsQuestion.length - 1));
   const result = itemnsQuestion[randomIndex];
+  сreatanswer(birdsDataEn[0]);
+  console.log(result);
   return  сreatQuestion(result);
 }
 
+//Question start
 function сreatQuestion(e) {
   const div = document.createElement('div');
     div.classList.add('game__question');
@@ -105,6 +110,10 @@ function сreatQuestion(e) {
       timeProgressBarQuestion(divCurrentTime, divCurrentlength);
     })
 
+    divProgressBarBlock.addEventListener('click',  function(e){
+      setBarQuestion (e, divProgressBarBlock);
+    })
+
     divSoundBtn.addEventListener('click', function(){
       saundMusikQuestion(divSoundBtn);
     })
@@ -113,10 +122,7 @@ function сreatQuestion(e) {
       saundRahgeQuestion(el,input,divSoundBtn);
     })
 
-    divProgressBarBlock.addEventListener('click',  function(e){
-      setBarQuestion (e, divProgressBarBlock);
-    })
-}
+  }
 
 function playBtnGuestion (e, divBtnPlay) {
   if(isPlay === false){
@@ -206,6 +212,66 @@ function saundRahgeQuestion (e,input,divSoundBtn) {
     audio.volume = value / 100;
   }
 }
+//Question end
+
+
+//birds start 
+function  сreatanswer(element) {
+  element.forEach(function(el){
+    const btn = document.createElement('button');
+    btn.classList.add('answer__btn');
+    btn.innerText = el.name;
+
+    answerChoice.appendChild(btn);
+
+    btn.addEventListener('click', function(elem){
+      if(el.id === el.id) {
+        creatInfobirds(el);
+      } 
+    })
+  })
+}
+
+function creatInfobirds(el) {
+  answerDesk.innerHTML =  '';
+
+  let div = document.createElement('div');
+    div.classList.add('answer__deskBird');
+    
+    let divDesk = document.createElement('div');
+    divDesk.classList.add('bird__desk');
+
+    let img = document.createElement('img');
+    img.classList.add('bird__img');
+    img.alt = 'bird';
+    img.src = el.image;
+
+    let divMusik = document.createElement('div');
+    divMusik.classList.add('answer__musiс');//ьузфка
+
+    let title = document.createElement('h2');
+    title.classList.add('bird__title');
+    title.innerText = el.name;
+
+    let titleSmall = document.createElement('div');
+    titleSmall.classList.add('bird__title-small');
+    titleSmall.innerText = el.species;
+
+    let text = document.createElement('div');
+    text.classList.add('bird__text');
+    text.innerText =  el.description;
+
+    answerDesk.appendChild(div);
+    div.appendChild(divDesk);
+    divDesk.appendChild(img);
+    divDesk.appendChild(divMusik);
+    divMusik.appendChild(title);
+    divMusik.appendChild(titleSmall);
+    
+    div.appendChild(text);
+}
+
+///birds end
 
 
 
