@@ -20,7 +20,7 @@
   <main>
     <section class="game">
       <div class="wrapper game__wrapper" id="game__wrapper">
-        <div class="game__title">Score: 0</div>
+        <div class="game__title">Score: <span id="game__score">0</span></div>
         <div class="game__btns">
           <div class="game__btn game__btn__active">Question 1</div>
           <div class="game__btn">Question 2</div>
@@ -32,15 +32,20 @@
       </div>
     </section>
     <section class="answer">
-      <div class="wrapper answer__wrapper">
-
-        <div class="answer__choice" id="answer__choice"></div>
-
-        <div class="answer__desk" id="answer__desk">
-          
+      <div class="wrapper">
+        
+        <div class="answer__wrapper">
+          <div class="answer__choice" id="answer__choice"></div>
+          <div class="answer__desk" id="answer__desk"></div>
         </div>
 
+        <div class="answer__btnNext">
+          <button class="answer__next" id="answer__next">Next</button>
+        </div>
+        
       </div>
+
+      
     </section>
   </main>
   <footer class="footer">

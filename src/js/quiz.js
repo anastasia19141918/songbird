@@ -1,13 +1,14 @@
 import birdsDataEn from './dataEN.js';
 import birdsData from './dataRU.js';
-console.log(birdsDataEn[0]);
 
 const wrapper = document.getElementById('game__wrapper');
 const answerChoice = document.getElementById('answer__choice');
-const answerDesk =  document.getElementById('answer__desk');
+const answerDesk = document.getElementById('answer__desk');
+const gameTitle =  document.getElementById('game__score');
+const answerNext = document.getElementById('answer__next');
 
 let questionIndex = 0; //текущий вопрос
-let scope = 0;//очки
+let score = 5;//очки
 
 const audio = new Audio;
 let isPlay = false;
@@ -20,9 +21,9 @@ function arrowQuestion() {
   });
   const randomIndex = Math.floor(Math.random() * (itemnsQuestion.length - 1));
   const result = itemnsQuestion[randomIndex];
-  сreatanswer(birdsDataEn[0]);
-  console.log(result);
+  сreatanswer(birdsDataEn[0], result);
   return  сreatQuestion(result);
+  
 }
 
 //Question start
@@ -216,23 +217,37 @@ function saundRahgeQuestion (e,input,divSoundBtn) {
 
 
 //birds start 
-function  сreatanswer(element) {
+function  сreatanswer(element, result) {
+  console.log(result);
   element.forEach(function(el){
     const btn = document.createElement('button');
     btn.classList.add('answer__btn');
     btn.innerText = el.name;
-
+    
     answerChoice.appendChild(btn);
 
-    btn.addEventListener('click', function(elem){
+    btn.addEventListener('click', function(){
       if(el.id === el.id) {
-        creatInfobirds(el);
+        creatInfoBirds(el);
       } 
+
+      if (el.id === result.id) {
+        btn.classList.add('answer__btn__answer');
+        gameTitle.innerText = score;
+        answerNext.classList.add('answer__next__active');
+      }
+      if (el.id !== result.id) {
+        btn.classList.add('answer__btn__noAnswer');
+        gameTitle.innerText = score -=1;
+      }
+      if(answerNext.classList.contains('answer__next__active')) {
+        btn.classList.remove('answer__btn__noAnswer');
+      }
     })
   })
 }
 
-function creatInfobirds(el) {
+function creatInfoBirds(el) {
   answerDesk.innerHTML =  '';
 
   let div = document.createElement('div');
@@ -247,7 +262,7 @@ function creatInfobirds(el) {
     img.src = el.image;
 
     let divMusik = document.createElement('div');
-    divMusik.classList.add('answer__musiс');//ьузфка
+    divMusik.classList.add('answer__musiс');
 
     let title = document.createElement('h2');
     title.classList.add('bird__title');

@@ -5,6 +5,7 @@
 .answer__wrapper {
   display: flex;
   flex-direction: row;
+  margin-bottom: 20px;
   gap: 0 20px;
 }
 
@@ -28,10 +29,21 @@
   transition: 0.4s all;
 }
 
-.answer__btn:hover {
+.answer__btn:hover,
+.answer__next:hover {
   background-color: #9fd8ff;
   transition: 0.4s all;
 }
+
+.answer__btn__noAnswer {
+  background-color: #d46a64;
+}
+
+.answer__btn__answer {
+  background-color: #00b949;
+}
+
+
 
 .answer__desk {
   width: 50%;
@@ -48,4 +60,26 @@
   padding-top: 10%;
   display: flex;
   flex-direction: column;
+}
+
+.answer__btnNext {
+  width: 100%;
+}
+
+.answer__next {
+  width: 100%;
+  padding: 20px 15px;
+  color: black;
+  font-size: 2.5rem;
+  line-height: 1.8rem;
+  border-radius: 5px;
+  background: #e0ccc3;
+  outline: none;
+  border: 0;
+  cursor: pointer;
+  transition: 0.4s all;
+}
+
+.answer__next__active {
+  border: 2px solid red;
 }
