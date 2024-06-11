@@ -4,9 +4,14 @@ import birdsData from './dataRU.js';
 const wrapper = document.getElementById('game__wrapper');
 const answerChoice = document.getElementById('answer__choice');
 const answerDesk = document.getElementById('answer__desk');
-const gameTitle =  document.getElementById('game__score');
+const gameTitle = document.getElementById('game__score');
 const answerNext = document.getElementById('answer__next');
-console.log(birdsDataEn);
+const gameBtn = document.querySelectorAll('.game__btn');
+const resultScoreCount = document.getElementById('result__score_count');
+const result = document.getElementById('result');
+const resultBody = document.getElementById('result__body');
+const resulBtn =  document.getElementById('result__btn');
+
 
 let questionIndex = 0; //текущий вопрос
 let score = 5;//очки
@@ -295,14 +300,42 @@ answerNext.addEventListener('click', nextAnswe);
 
 function nextAnswe() {
   answerNext.classList.remove('answer__next__active');
+  
+  
   if(questionIndex !== birdsDataEn.length - 1) {
     questionIndex++;
     arrowQuestion();
+    nexBtnQuestion()
   } else {
-    console.log('последний');
+    showResult();
   }
   
+};
+
+function nexBtnQuestion() {
+  let newArrowBtn = Array.from(gameBtn);
+  newArrowBtn[questionIndex];
+  newArrowBtn[questionIndex].classList.add('game__btn__active');
 }
+
+function showResult() {
+  resultScoreCount.innerHTML = score;
+  result.classList.add('result__active');
+}
+
+document.addEventListener('mouseup', function(e){
+  if(!resultBody.contains(e.target)) {
+   
+    result.classList.remove('result__active');
+  }
+});
+
+resulBtn.addEventListener('click', function(){
+  history.go();
+})
+
+
+
 
 
 
