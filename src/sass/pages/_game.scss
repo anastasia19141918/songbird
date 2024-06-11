@@ -1,3 +1,10 @@
+.game {
+  padding: 0 30px;
+  @include media-modale-answer {
+   padding: 0 10px;
+  }
+}
+
 .game__wrapper {
   display: flex;
   flex-direction: column;
@@ -9,6 +16,9 @@
   font-weight: 600;
   color: $color-footer;
   text-align: right;
+  @include media-modale-game-small {
+    font-size: 2.0rem;
+  }
 }
 
 .game__btns {
@@ -17,6 +27,13 @@
   flex-direction: row;
   justify-content:space-between;
   gap: 0 30px;
+  @include media-tablet-game-big {
+    gap: 0 4px;
+  }
+  @include media-small {
+    flex-direction: column;
+    gap: 5px 0;
+  }
 }
 
 .game__btn {
@@ -25,10 +42,43 @@
   background-image: linear-gradient(#2E9AFF, #ffb9d5);
   padding: 20px 60px;
   border-radius: 3px;
+  @include media-desktop-game {
+    padding: 20px 30px;
+  }
+  @include media-tablet-game-big {
+    padding: 20px 40px;
+    font-size: 1.7rem;
+  }
+  @include media-taplet-gallery-big {
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+  @include media-taplet-gallery-small {
+    padding: 20px 20px;
+  }
+  @include media-modale-game-big {
+    padding: 20px 10px;
+    font-size: 1.2rem;
+  }
+  @include media-modale-game {
+    padding: 5px 6px;
+  }
+  @include media-modale-answer {
+    padding: 5px 4px;
+    font-size: 1.0rem;
+  }
+  @include media-modale-answer-small {
+    padding: 5px 2px;
+  }
+  @include media-small {
+    padding: 10px 10px;
+    text-align: center;
+    font-size: 1.3rem;
+  }
 }
 
 .game__btn__active {
-  background: $color-footer;;
+  background: $color-footer;
 }
 
 // block question start 
@@ -43,6 +93,18 @@
 
   background-image: linear-gradient(#2E9AFF, #ffb9d5);
   border-radius: 5px;
+  @include media-modale-answer-big {
+    padding: 15px;
+    gap: 0 20px;
+  }
+  @include media-modaleSmall {
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+  }
+  @include media-small {
+    gap: 20px 0px;
+  }
 }
 
 .game__question-img {
@@ -51,6 +113,10 @@
   border-radius: 10px;
   border: 1px solid black;
   object-fit: cover;
+  @include media-modale-answer-big {
+    width: 130px;
+    height: 130px;
+  }
 }
 
 .game__question-desk {
@@ -64,6 +130,9 @@
   font-weight: 600;
   color: $color-text;
   text-transform: uppercase;
+  @include media-modaleSmall {
+    font-size: 1.5rem;
+  }
 }
 
 .game__question-musik {
@@ -101,6 +170,42 @@
   background-color: #ffffff;
   border-radius: 5px;
   cursor: pointer;
+  @include media-desktop-game {
+    width: 1000px;
+  }
+  @include media-desktop-gallery {
+    width: 900px;
+  }
+  @include media-desktop-game-small {
+    width: 800px;
+  }
+  @include media-tablet-game-big {
+    width: 600px;
+  }
+  @include media-taplet-gallery-big {
+    width: 550px;
+  }
+  @include media-taplet-gallery-small {
+    width: 500px;
+  }
+  @include media-taplet-gallery-small {
+      width: 400px;
+  }
+  @include media-modale-game-big {
+    width: 280px;
+  }
+  @include media-modale-game-small {
+    width: 180px;
+  }
+  @include media-modale-game {
+    width: 120px;
+  }
+  @include  media-modale-answer {
+    width: 100px;
+  }
+  @include media-modale-answer-small {
+    width: 60px;
+  }
 }
 
 .game__question-range {
@@ -151,6 +256,12 @@
 .game__question-sounProgressBar {
   width: 120px;
   margin-top: 5px;
+  @include  media-modale-answer {
+    width: 100px;
+  }
+  @include media-modale-answer-small {
+    width: 60px;
+  }
 }
 
 .game__question-sounType {

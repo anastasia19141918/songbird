@@ -51,3 +51,52 @@
 @mixin media-mabale-gallery {
   @media(max-width: $media-mabale-gallery) { @content }
 };
+
+//media game
+@mixin media-desktop-game {
+  @media(max-width: $media-desktop-game) { @content }
+};
+
+@mixin media-desktop-game-small {
+  @media(max-width: $media-desktop-game-small) { @content }
+};
+
+@mixin media-tablet-game-big {
+  @media(max-width: $media-tablet-game-big) { @content }
+};
+
+@mixin media-tablet-game {
+  @media(max-width: $media-tablet-game) { @content }
+};
+
+@mixin media-modale-game-big {
+  @media(max-width: $media-modale-game-big) { @content }
+};
+
+@mixin media-modale-game-small {
+  @media(max-width: $media-modale-game-small) { @content }
+};
+
+@mixin media-modale-game {
+  @media(max-width: $media-modale-game) { @content }
+};
+
+@mixin media-modale-answer {
+  @media(max-width: $media-modale-answer) { @content }
+};
+
+@mixin media-modale-answer-big {
+  @media(max-width: $media-modale-answer-big) { @content }
+};
+
+@mixin media-modale-answer-small {
+  @media(max-width: $media-modale-answer-small) { @content }
+};
+
+@mixin media-modaleSmall {
+  @media(max-width: $media-modaleSmall) { @content }
+};
+
+@mixin media-small {
+  @media(max-width: $media-small) { @content }
+};

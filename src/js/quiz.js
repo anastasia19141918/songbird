@@ -266,6 +266,7 @@ function creatInfoBirds(el) {
 
     let img = document.createElement('img');
     img.classList.add('bird__img');
+    img.classList.add('bird__img-answer');
     img.alt = 'bird';
     img.src = el.image;
 
