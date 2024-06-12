@@ -256,6 +256,7 @@ function  сreatanswer(element, result) {
         btn.classList.add('answer__btn__answer');
         gameTitle.innerText =  score +=5;
         answerNext.classList.add('answer__next__active');
+        
         answerNext.disabled = false;
       }
       if (el.id !== result.id) {
