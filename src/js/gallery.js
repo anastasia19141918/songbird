@@ -1,7 +1,4 @@
 import birdsDataEn from './dataEN.js';
-import birdsData from './dataRU.js';
-
-
 
 const galleryBtns = document.getElementById('gallery__btns');
 const galleryBtn = document.querySelectorAll('.gallery__btn');

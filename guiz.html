@@ -20,7 +20,7 @@
   <main>
     <section class="game">
       <div class="wrapper game__wrapper" id="game__wrapper">
-        <div class="game__title">Score: 0</div>
+        <div class="game__title">Score: <span id="game__score">0</span></div>
         <div class="game__btns">
           <div class="game__btn game__btn__active">Question 1</div>
           <div class="game__btn">Question 2</div>
@@ -31,7 +31,44 @@
         </div>
       </div>
     </section>
+    <section class="answer">
+      <div class="wrapper">
+        <div class="game__question" id="game__question">
+
+        </div>
+        <div class="answer__wrapper">
+          <div class="answer__choice" id="answer__choice"></div>
+          <div class="answer__desk" id="answer__desk"></div>
+
+          <div class="result" id="result">
+            <div class="result__body" id="result__body">
+               <div class="result__score">SCORE:<span class="result__score_count" id="result__score_count"></span></div>
+               <button class="result__btn" id="result__btn">try again</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="answer__btnNext">
+          <button class="answer__next" id="answer__next">Next</button>
+        </div>
+        
+      </div>
+
+      
+    </section>
   </main>
+  <footer class="footer">
+    <div class="wrapper wrapper__footer">
+      <div class="footer__item">2024 ©</div>
+      <a href="https://github.com/anastasia19141918" class="footer__link">
+        <img src="./src/img/github.svg" alt="githab" class="footer__githab">
+      </a>
+      <a href="https://rs.school/" class="footer__link">
+        <img src="./src/img/RS.svg" alt="githab" class="footer__RS">
+      </a>
+    </div>
+  </footer>
   <script type="module" src="./src/js/quiz.js"></script>
 </body>
 </html>

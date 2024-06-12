@@ -1,10 +1,19 @@
 import birdsDataEn from './dataEN.js';
-import birdsData from './dataRU.js';
 
 const wrapper = document.getElementById('game__wrapper');
+const answerChoice = document.getElementById('answer__choice');
+const answerDesk = document.getElementById('answer__desk');
+const gameTitle = document.getElementById('game__score');
+const answerNext = document.getElementById('answer__next');
+const gameBtn = document.querySelectorAll('.game__btn');
+const resultScoreCount = document.getElementById('result__score_count');
+const result = document.getElementById('result');
+const resultBody = document.getElementById('result__body');
+const resulBtn =  document.getElementById('result__btn');
+
 
 let questionIndex = 0; //текущий вопрос
-let scope = 0;//очки
+let score = 5;//очки
 
 const audio = new Audio;
 let isPlay = false;
@@ -12,19 +21,20 @@ let isPlay = false;
 window.addEventListener('load', arrowQuestion);
 
 function arrowQuestion() {
-  let itemnsQuestion = birdsDataEn[0].map(function(el){
+  let itemnsQuestion = birdsDataEn[questionIndex].map(function(el){
     return el;
   });
-  
   const randomIndex = Math.floor(Math.random() * (itemnsQuestion.length - 1));
   const result = itemnsQuestion[randomIndex];
+  сreatanswer(birdsDataEn[questionIndex], result);
   return  сreatQuestion(result);
+  
 }
 
+//Question start
 function сreatQuestion(e) {
-  const div = document.createElement('div');
-    div.classList.add('game__question');
-
+  const div = document.getElementById('game__question');
+  div.innerText = '';
     const img = document.createElement('img');
     img.classList.add('game__question-img');
     img.src = './src/img/question.jpg';
@@ -79,7 +89,6 @@ function сreatQuestion(e) {
     input.max = '100';
     input.step = '0.1';
 
-    wrapper.appendChild(div);
     div.appendChild(img);
     div.appendChild(divGuestionDesk);
     divGuestionDesk.appendChild(title);
@@ -105,6 +114,10 @@ function сreatQuestion(e) {
       timeProgressBarQuestion(divCurrentTime, divCurrentlength);
     })
 
+    divProgressBarBlock.addEventListener('click',  function(e){
+      setBarQuestion (e, divProgressBarBlock);
+    })
+
     divSoundBtn.addEventListener('click', function(){
       saundMusikQuestion(divSoundBtn);
     })
@@ -113,10 +126,7 @@ function сreatQuestion(e) {
       saundRahgeQuestion(el,input,divSoundBtn);
     })
 
-    divProgressBarBlock.addEventListener('click',  function(e){
-      setBarQuestion (e, divProgressBarBlock);
-    })
-}
+  }
 
 function playBtnGuestion (e, divBtnPlay) {
   if(isPlay === false){
@@ -131,6 +141,22 @@ function playBtnGuestion (e, divBtnPlay) {
         divBtnPlay.classList.toggle('game__question-pause');
     }
 }
+
+/*
+if (isPlay === false) {
+    activTreck()
+    isPlay = true;
+    audio.src = playList[playNum].src;
+    audio.currentTime = 0;
+    audio.play();
+    plaMusik.classList.toggle('pause');
+    playListText.textContent = playList[playNum].title;
+  } else {
+    isPlay = false;
+    audio.pause();
+    plaMusik.classList.toggle('pause');
+  }
+*/
 
 function updateBarQuestion (e, divProgressBarRanch) {
   const {duration, currentTime} = e.srcElement;
@@ -206,6 +232,126 @@ function saundRahgeQuestion (e,input,divSoundBtn) {
     audio.volume = value / 100;
   }
 }
+//Question end
+
+
+//birds start 
+function  сreatanswer(element, result) {
+  console.log(result);
+  answerNext.disabled = true;
+  answerChoice.innerText = '';
+  element.forEach(function(el){
+    const btn = document.createElement('button');
+    btn.classList.add('answer__btn');
+    btn.innerText = el.name;
+    
+    answerChoice.appendChild(btn);
+
+    btn.addEventListener('click', function(){
+      if(el.id === el.id) {
+        creatInfoBirds(el);
+      } 
+
+      if (el.id === result.id) {
+        btn.classList.add('answer__btn__answer');
+        gameTitle.innerText =  score +=5;
+        answerNext.classList.add('answer__next__active');
+        answerNext.disabled = false;
+      }
+      if (el.id !== result.id) {
+        btn.classList.add('answer__btn__noAnswer');
+        gameTitle.innerText = score -=1;
+      }
+      if(answerNext.classList.contains('answer__next__active')) {
+        btn.classList.remove('answer__btn__noAnswer');
+      }
+     
+    })
+  })
+}
+
+function creatInfoBirds(el) {
+  answerDesk.innerHTML =  '';
+
+  let div = document.createElement('div');
+    div.classList.add('answer__deskBird');
+    
+    let divDesk = document.createElement('div');
+    divDesk.classList.add('bird__desk');
+
+    let img = document.createElement('img');
+    img.classList.add('bird__img');
+    img.classList.add('bird__img-answer');
+    img.alt = 'bird';
+    img.src = el.image;
+
+    let divMusik = document.createElement('div');
+    divMusik.classList.add('answer__musiс');
+
+    let title = document.createElement('h2');
+    title.classList.add('bird__title');
+    title.innerText = el.name;
+
+    let titleSmall = document.createElement('div');
+    titleSmall.classList.add('bird__title-small');
+    titleSmall.innerText = el.species;
+
+    let text = document.createElement('div');
+    text.classList.add('bird__text');
+    text.innerText = el.description;
+
+    answerDesk.appendChild(div);
+    div.appendChild(divDesk);
+    divDesk.appendChild(img);
+    divDesk.appendChild(divMusik);
+    divMusik.appendChild(title);
+    divMusik.appendChild(titleSmall);
+    
+    div.appendChild(text);
+}
+
+///birds end
+
+answerNext.addEventListener('click', nextAnswe);
+
+function nextAnswe() {
+  answerNext.classList.remove('answer__next__active');
+  
+  
+  if(questionIndex !== birdsDataEn.length - 1) {
+    questionIndex++;
+    arrowQuestion();
+    nexBtnQuestion()
+  } else {
+    showResult();
+  }
+  
+};
+
+function nexBtnQuestion() {
+  let newArrowBtn = Array.from(gameBtn);
+  newArrowBtn[questionIndex];
+  newArrowBtn[questionIndex].classList.add('game__btn__active');
+}
+
+function showResult() {
+  resultScoreCount.innerHTML = score;
+  result.classList.add('result__active');
+}
+
+document.addEventListener('mouseup', function(e){
+  if(!resultBody.contains(e.target)) {
+   
+    result.classList.remove('result__active');
+  }
+});
+
+resulBtn.addEventListener('click', function(){
+  history.go();
+})
+
+
+
 
 
 
