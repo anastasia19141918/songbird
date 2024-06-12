@@ -793,20 +793,6 @@ body {
   }
 }
 
-.game__question-img {
-  width: 150px;
-  height: 150px;
-  border-radius: 10px;
-  border: 1px solid black;
-  object-fit: cover;
-}
-@media (max-width: 433px) {
-  .game__question-img {
-    width: 130px;
-    height: 130px;
-  }
-}
-
 .game__question-desk {
   display: flex;
   flex-direction: column;
@@ -816,7 +802,7 @@ body {
   margin: 0 0 5px 0;
   font-size: 3rem;
   font-weight: 600;
-  color: #ffffff;
+  color: black;
   text-transform: uppercase;
 }
 @media (max-width: 360px) {

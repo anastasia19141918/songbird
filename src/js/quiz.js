@@ -35,11 +35,7 @@ function arrowQuestion() {
 function сreatQuestion(e) {
   const div = document.getElementById('game__question');
   div.innerText = '';
-    const img = document.createElement('img');
-    img.classList.add('game__question-img');
-    img.src = './src/img/question.jpg';
-    img.alt = 'img question';
-
+    
     const divGuestionDesk = document.createElement('div');
     divGuestionDesk.classList.add('game__question-desk');
 
@@ -89,7 +85,6 @@ function сreatQuestion(e) {
     input.max = '100';
     input.step = '0.1';
 
-    div.appendChild(img);
     div.appendChild(divGuestionDesk);
     divGuestionDesk.appendChild(title);
     divGuestionDesk.appendChild(divGuestionMusik);
@@ -107,25 +102,26 @@ function сreatQuestion(e) {
 
     divBtnPlay.addEventListener('click', function(){
       playBtnGuestion (e, divBtnPlay);
-    })
+    });
 
     audio.addEventListener ('timeupdate', function(el){
       updateBarQuestion(el, divProgressBarRanch);
       timeProgressBarQuestion(divCurrentTime, divCurrentlength);
-    })
+    });
 
     divProgressBarBlock.addEventListener('click',  function(e){
       setBarQuestion (e, divProgressBarBlock);
-    })
+    });
 
     divSoundBtn.addEventListener('click', function(){
       saundMusikQuestion(divSoundBtn);
-    })
+    });
 
     input.addEventListener('click', function(el){
       saundRahgeQuestion(el,input,divSoundBtn);
-    })
+    });
 
+    return title;
   }
 
 function playBtnGuestion (e, divBtnPlay) {
@@ -141,22 +137,6 @@ function playBtnGuestion (e, divBtnPlay) {
         divBtnPlay.classList.toggle('game__question-pause');
     }
 }
-
-/*
-if (isPlay === false) {
-    activTreck()
-    isPlay = true;
-    audio.src = playList[playNum].src;
-    audio.currentTime = 0;
-    audio.play();
-    plaMusik.classList.toggle('pause');
-    playListText.textContent = playList[playNum].title;
-  } else {
-    isPlay = false;
-    audio.pause();
-    plaMusik.classList.toggle('pause');
-  }
-*/
 
 function updateBarQuestion (e, divProgressBarRanch) {
   const {duration, currentTime} = e.srcElement;
@@ -237,7 +217,7 @@ function saundRahgeQuestion (e,input,divSoundBtn) {
 
 //birds start 
 function  сreatanswer(element, result) {
-  console.log(result);
+  
   answerNext.disabled = true;
   answerChoice.innerText = '';
   element.forEach(function(el){
@@ -253,12 +233,15 @@ function  сreatanswer(element, result) {
       } 
 
       if (el.id === result.id) {
+        let showBird = сreatQuestion();
         btn.classList.add('answer__btn__answer');
         gameTitle.innerText =  score +=5;
         answerNext.classList.add('answer__next__active');
-        
+
         answerNext.disabled = false;
+        showBird.innerHTML = result.name;
       }
+
       if (el.id !== result.id) {
         btn.classList.add('answer__btn__noAnswer');
         gameTitle.innerText = score -=1;
@@ -349,7 +332,9 @@ document.addEventListener('mouseup', function(e){
 
 resulBtn.addEventListener('click', function(){
   history.go();
-})
+});
+
+
 
 
 
