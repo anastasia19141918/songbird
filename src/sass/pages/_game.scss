@@ -107,18 +107,6 @@
   }
 }
 
-.game__question-img {
-  width: 150px;
-  height: 150px;
-  border-radius: 10px;
-  border: 1px solid black;
-  object-fit: cover;
-  @include media-modale-answer-big {
-    width: 130px;
-    height: 130px;
-  }
-}
-
 .game__question-desk {
   display: flex;
   flex-direction: column;
@@ -128,7 +116,7 @@
   margin: 0 0 5px 0;
   font-size: 3.0rem;
   font-weight: 600;
-  color: $color-text;
+  color: black;
   text-transform: uppercase;
   @include media-modaleSmall {
     font-size: 1.5rem;

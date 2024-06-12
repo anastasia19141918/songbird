@@ -38,10 +38,20 @@
   transition: 0.4s all;
 }
 
-.answer__btn:hover,
+.answer__btn:hover {
+  background-color: #9fd8ff;
+  transition: 0.4s all;
+  @include media-taplet-gallery {
+    background-color: #ffffff;
+  }
+}
+
 .answer__next:hover {
   background-color: #9fd8ff;
   transition: 0.4s all;
+  @include media-taplet-gallery {
+    background-color: #e0ccc3;;
+  }
 }
 
 .answer__btn__noAnswer {
