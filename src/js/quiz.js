@@ -1,5 +1,4 @@
 import birdsDataEn from './dataEN.js';
-import birdsData from './dataRU.js';
 
 const wrapper = document.getElementById('game__wrapper');
 const answerChoice = document.getElementById('answer__choice');
@@ -142,6 +141,22 @@ function playBtnGuestion (e, divBtnPlay) {
         divBtnPlay.classList.toggle('game__question-pause');
     }
 }
+
+/*
+if (isPlay === false) {
+    activTreck()
+    isPlay = true;
+    audio.src = playList[playNum].src;
+    audio.currentTime = 0;
+    audio.play();
+    plaMusik.classList.toggle('pause');
+    playListText.textContent = playList[playNum].title;
+  } else {
+    isPlay = false;
+    audio.pause();
+    plaMusik.classList.toggle('pause');
+  }
+*/
 
 function updateBarQuestion (e, divProgressBarRanch) {
   const {duration, currentTime} = e.srcElement;
