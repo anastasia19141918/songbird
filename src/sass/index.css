@@ -1141,13 +1141,39 @@ body {
 }
 
 .result__body {
+  width: 300px;
   position: absolute;
   padding: 25px 10px;
   top: 50%;
   left: 40%;
-  width: 300px;
   background: #ffffff;
   border-radius: 5px;
+}
+@media (max-width: 577px) {
+  .result__body {
+    top: 30%;
+    left: 20%;
+  }
+}
+@media (max-width: 429px) {
+  .result__body {
+    top: 30%;
+    left: 12%;
+  }
+}
+@media (max-width: 383px) {
+  .result__body {
+    top: 30%;
+    left: 8%;
+    width: 250px;
+  }
+}
+@media (max-width: 313px) {
+  .result__body {
+    top: 30%;
+    left: 5%;
+    width: 200px;
+  }
 }
 
 .result__score {
@@ -1171,6 +1197,11 @@ body {
   outline: none;
   border: 0;
   cursor: pointer;
+}
+@media (max-width: 313px) {
+  .result__btn {
+    margin-left: 22%;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

@@ -132,13 +132,31 @@
 }
 
 .result__body {
+  width: 300px;
   position: absolute;
   padding: 25px 10px;
   top: 50%;
   left: 40%;
-  width: 300px;
   background: #ffffff;
   border-radius: 5px;
+  @include media-tablet-result-big {
+    top: 30%;
+    left: 20%;
+  }
+  @include media-tablet-result {
+    top: 30%;
+    left: 12%;
+  }
+  @include media-tablet-result-small {
+    top: 30%;
+    left: 8%;
+    width: 250px;
+  }
+  @include media-mobale-result-big {
+    top: 30%;
+    left: 5%;
+    width: 200px;
+  }
 }
 
 .result__score {
@@ -162,6 +180,9 @@
   outline: none;
   border: 0;
   cursor: pointer;
+  @include media-mobale-result-big {
+    margin-left: 22%;
+  }
 }
 
 //result end

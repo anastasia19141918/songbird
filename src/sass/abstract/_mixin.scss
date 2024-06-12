@@ -100,3 +100,20 @@
 @mixin media-small {
   @media(max-width: $media-small) { @content }
 };
+
+//result start
+@mixin media-tablet-result-big {
+  @media(max-width: $media-tablet-result-big) { @content }
+};
+
+@mixin media-tablet-result {
+  @media(max-width: $media-tablet-result) { @content }
+};
+
+@mixin media-tablet-result-small {
+  @media(max-width: $media-tablet-result-small) { @content }
+};
+
+@mixin media-mobale-result-big {
+  @media(max-width: $media-mobale-result-big) { @content }
+};
