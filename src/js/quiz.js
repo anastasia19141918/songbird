@@ -1,5 +1,6 @@
 import birdsDataEn from './dataEN.js';
 
+
 const wrapper = document.getElementById('game__wrapper');
 const answerChoice = document.getElementById('answer__choice');
 const answerDesk = document.getElementById('answer__desk');

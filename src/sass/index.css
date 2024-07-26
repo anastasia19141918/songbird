@@ -86,6 +86,7 @@ body {
 @media (max-width: 1052px) {
   .header__btns, .header__languages {
     flex-direction: column;
+    gap: 30px 30px;
   }
 }
 @media (max-width: 276px) {
