@@ -110,7 +110,7 @@
 .bird {
   width: 35%;
   padding: 30px;
-  background-image: linear-gradient(#2E9AFF, #ffb9d5);
+  background-color: $color-itemn;
   border-radius: 10px;
   @include media-mabale-gallery-small {
     width: 70%;

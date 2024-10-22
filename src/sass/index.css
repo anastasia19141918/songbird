@@ -5,7 +5,7 @@ html {
 }
 
 body {
-  background-color: #12654c;
+  background-color: #524656;
 }
 
 .wrapper {
@@ -96,9 +96,10 @@ body {
 }
 
 .btn {
-  padding: 5px 30px;
+  padding: 2px 10px;
+  text-align: center;
   background-color: #ffffff;
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   font-weight: 600;
   word-spacing: normal;
   text-transform: uppercase;
@@ -110,8 +111,8 @@ body {
 }
 @media (max-width: 1052px) {
   .btn {
-    padding: 15px 30px;
-    font-size: 2.6rem;
+    padding: 10px 20px;
+    font-size: 1.8rem;
   }
 }
 @media (max-width: 376px) {
@@ -233,13 +234,12 @@ body {
 
 .quiz__imgs {
   width: 420px;
-  height: 420px;
-  background-color: #ffbd76;
-  background-image: url("../../src/img/result.png");
-  background-size: 420px 420px;
+  height: 480px;
+  background-color: #025959;
+  background-image: url("../../src/img/icon-birds.png");
+  background-size: 420px 480px;
   background-repeat: no-repeat;
-  background-position: 55px 50px;
-  border-radius: 50%;
+  border: 6px solid #F29727;
 }
 @media (max-width: 767px) {
   .quiz__imgs {
@@ -249,8 +249,8 @@ body {
 @media (max-width: 475px) {
   .quiz__imgs {
     width: 280px;
-    height: 280px;
-    background-size: 280px 280px;
+    height: 320px;
+    background-size: 280px 320px;
   }
 }
 @media (max-width: 376px) {
@@ -287,7 +287,7 @@ body {
   margin: 0;
   font-size: 3rem;
   font-weight: 600;
-  color: #ffffff;
+  color: #F29727;
   text-transform: uppercase;
 }
 @media (max-width: 475px) {
@@ -443,7 +443,7 @@ body {
 .bird {
   width: 35%;
   padding: 30px;
-  background-image: linear-gradient(#2E9AFF, #ffb9d5);
+  background-color: #025959;
   border-radius: 10px;
 }
 @media (max-width: 515px) {
@@ -705,7 +705,7 @@ body {
 .game__btn {
   font-size: 2rem;
   color: black;
-  background-image: linear-gradient(#2E9AFF, #ffb9d5);
+  background-color: #025959;
   padding: 20px 60px;
   border-radius: 3px;
 }
@@ -772,7 +772,7 @@ body {
   justify-content: flex-start;
   gap: 0 30px;
   margin-bottom: 20px;
-  background-image: linear-gradient(#2E9AFF, #ffb9d5);
+  background-color: #025959;
   border-radius: 5px;
 }
 @media (max-width: 433px) {
@@ -1025,7 +1025,7 @@ body {
   font-size: 1.8rem;
   line-height: 1.8rem;
   border-radius: 5px;
-  background-color: #ffffff;
+  background-color: #F4E2CC;
   outline: none;
   border: 0;
   cursor: pointer;
@@ -1062,7 +1062,7 @@ body {
 
 .answer__desk {
   width: 50%;
-  background-image: linear-gradient(#2E9AFF, #ffb9d5);
+  background-color: #025959;
   border-radius: 5px;
 }
 
