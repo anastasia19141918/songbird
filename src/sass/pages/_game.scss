@@ -39,7 +39,7 @@
 .game__btn {
   font-size: 2.0rem;
   color: black;
-  background-image: linear-gradient(#2E9AFF, #ffb9d5);
+  background-color: $color-itemn;
   padding: 20px 60px;
   border-radius: 3px;
   @include media-desktop-game {
@@ -91,7 +91,7 @@
   gap: 0 30px;
   margin-bottom: 20px;
 
-  background-image: linear-gradient(#2E9AFF, #ffb9d5);
+  background-color: $color-itemn;
   border-radius: 5px;
   @include media-modale-answer-big {
     padding: 15px;
