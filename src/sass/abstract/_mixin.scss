@@ -1,119 +1,121 @@
+@use '../abstract/media' as m;
+
 @mixin media-desktop {
-  @media(max-width: $media-desktop) { @content }
+  @media(max-width: m.$media-desktop) { @content }
 };
 
 @mixin media-taplet {
-  @media(max-width: $media-taplet) { @content }
+  @media(max-width: m.$media-taplet) { @content }
 };
 
 @mixin media-mobale-big {
-  @media(max-width: $media-mobale-big) { @content }
+  @media(max-width: m.$media-mobale-big) { @content }
 };
 
 @mixin media-mobale {
-  @media(max-width: $media-mobale) { @content }
+  @media(max-width: m.$media-mobale) { @content }
 };
 
 @mixin  media-mobale-small {
-  @media(max-width: $media-mobale-small) { @content }
+  @media(max-width: m.$media-mobale-small) { @content }
 };
 
 //media gallery
 
 @mixin media-desktop-gallery {
-  @media(max-width: $media-desktop-gallery) { @content }
+  @media(max-width: m.$media-desktop-gallery) { @content }
 };
 
 @mixin media-desktop-gallery-small {
-  @media(max-width: $media-desktop-gallery-small) { @content }
+  @media(max-width: m.$media-desktop-gallery-small) { @content }
 };
 
 @mixin media-taplet-gallery-big {
-  @media(max-width: $media-taplet-gallery-big) { @content }
+  @media(max-width: m.$media-taplet-gallery-big) { @content }
 };
 
 @mixin media-taplet-gallery-small {
-  @media(max-width: $media-taplet-gallery-small) { @content }
+  @media(max-width: m.$media-taplet-gallery-small) { @content }
 };
 
 @mixin media-taplet-gallery {
-  @media(max-width: $media-taplet-gallery) { @content }
+  @media(max-width: m.$media-taplet-gallery) { @content }
 };
 
 @mixin media-mabale-gallery-big {
-  @media(max-width: $media-mabale-gallery-big) { @content }
+  @media(max-width: m.$media-mabale-gallery-big) { @content }
 };
 
 @mixin media-mabale-gallery-small {
-  @media(max-width: $media-mabale-gallery-small) { @content }
+  @media(max-width: m.$media-mabale-gallery-small) { @content }
 };
 
 @mixin media-mabale-gallery {
-  @media(max-width: $media-mabale-gallery) { @content }
+  @media(max-width: m.$media-mabale-gallery) { @content }
 };
 
 //media game
 @mixin media-desktop-game {
-  @media(max-width: $media-desktop-game) { @content }
+  @media(max-width: m.$media-desktop-game) { @content }
 };
 
 @mixin media-desktop-game-small {
-  @media(max-width: $media-desktop-game-small) { @content }
+  @media(max-width: m.$media-desktop-game-small) { @content }
 };
 
 @mixin media-tablet-game-big {
-  @media(max-width: $media-tablet-game-big) { @content }
+  @media(max-width: m.$media-tablet-game-big) { @content }
 };
 
 @mixin media-tablet-game {
-  @media(max-width: $media-tablet-game) { @content }
+  @media(max-width: m.$media-tablet-game) { @content }
 };
 
 @mixin media-modale-game-big {
-  @media(max-width: $media-modale-game-big) { @content }
+  @media(max-width: m.$media-modale-game-big) { @content }
 };
 
 @mixin media-modale-game-small {
-  @media(max-width: $media-modale-game-small) { @content }
+  @media(max-width: m.$media-modale-game-small) { @content }
 };
 
 @mixin media-modale-game {
-  @media(max-width: $media-modale-game) { @content }
+  @media(max-width: m.$media-modale-game) { @content }
 };
 
 @mixin media-modale-answer {
-  @media(max-width: $media-modale-answer) { @content }
+  @media(max-width: m.$media-modale-answer) { @content }
 };
 
 @mixin media-modale-answer-big {
-  @media(max-width: $media-modale-answer-big) { @content }
+  @media(max-width: m.$media-modale-answer-big) { @content }
 };
 
 @mixin media-modale-answer-small {
-  @media(max-width: $media-modale-answer-small) { @content }
+  @media(max-width: m.$media-modale-answer-small) { @content }
 };
 
 @mixin media-modaleSmall {
-  @media(max-width: $media-modaleSmall) { @content }
+  @media(max-width: m.$media-modaleSmall) { @content }
 };
 
 @mixin media-small {
-  @media(max-width: $media-small) { @content }
+  @media(max-width: m.$media-small) { @content }
 };
 
 //result start
 @mixin media-tablet-result-big {
-  @media(max-width: $media-tablet-result-big) { @content }
+  @media(max-width: m.$media-tablet-result-big) { @content }
 };
 
 @mixin media-tablet-result {
-  @media(max-width: $media-tablet-result) { @content }
+  @media(max-width: m.$media-tablet-result) { @content }
 };
 
 @mixin media-tablet-result-small {
-  @media(max-width: $media-tablet-result-small) { @content }
+  @media(max-width: m.$media-tablet-result-small) { @content }
 };
 
 @mixin media-mobale-result-big {
-  @media(max-width: $media-mobale-result-big) { @content }
+  @media(max-width: m.$media-mobale-result-big) { @content }
 };

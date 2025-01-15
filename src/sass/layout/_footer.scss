@@ -1,6 +1,9 @@
+@use '../abstract/constans' as c;
+@use '../abstract/mixin' as m;
+
 .footer {
   padding: 30px;
-  @include media-mobale {
+  @include m.media-mobale {
     padding: 15px;
   }
 }
@@ -11,7 +14,7 @@
   justify-content: flex-end;
   gap: 0 20px;
   align-items: center;
-  @include media-taplet {
+  @include m.media-taplet {
     justify-content: center;
   }
 }
@@ -19,14 +22,14 @@
 .footer__item {
   font-size: 2.0rem;
   font-weight: 600;
-  color: $color-footer;
-  @include media-mobale {
+  color: c.$color-footer;
+  @include m.media-mobale {
     font-size: 1.7rem;
   }
 }
 
 .footer__link {
-  @include media-mobale {
+  @include m.media-mobale {
     margin-top: 0px;
   }
 }
@@ -34,7 +37,7 @@
 .footer__githab {
   width: 30px;
   height: 30px;
-  @include media-mobale {
+  @include m.media-mobale {
     width: 25px;
     height: 25px
   }
@@ -43,7 +46,7 @@
 .footer__RS {
   width: 30px;
   height: 30px;
-  @include media-mobale {
+  @include m.media-mobale {
     width: 40px;
     height: 40px
   }

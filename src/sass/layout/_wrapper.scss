@@ -1,4 +1,6 @@
+@use '../abstract/constans' as c;
+
 .wrapper {
-  max-width: $content-width;
+  max-width: c.$content-width;
   margin: auto;
 }

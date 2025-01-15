@@ -1,9 +1,12 @@
+@use '../abstract/constans' as c;
+@use '../abstract/mixin' as m;
+
 .answer {
   padding: 30px;
-  @include media-modale-answer {
+  @include m.media-modale-answer {
     padding: 10px 30px;
   }
-  @include media-small {
+  @include m.media-small {
     padding: 20px 30px;
   }
 }
@@ -20,18 +23,18 @@
   display: flex;
   flex-direction: column;
   gap: 5px 0;
-  @include media-modale-answer-small {
+  @include m.media-modale-answer-small {
     gap: 30px 0;
   }
 }
 
 .answer__btn {
   padding: 20px 15px;
-  color: black;
+  color: c.$color-btn-text;
   font-size: 1.8rem;
   line-height: 1.8rem;
   border-radius: 5px;
-  background-color: $color-btn;
+  background-color: c.$color-btn;
   outline: none;
   border: 0;
   cursor: pointer;
@@ -39,55 +42,47 @@
 }
 
 .answer__btn:hover {
-  background-color: #9fd8ff;
+  background-color: c.$color-hover-answer;
   transition: 0.4s all;
-  @include media-taplet-gallery {
-    background-color: #ffffff;
-  }
-}
-
-.answer__next:hover {
-  background-color: #9fd8ff;
-  transition: 0.4s all;
-  @include media-taplet-gallery {
-    background-color: #e0ccc3;
+  @include m.media-taplet-gallery {
+    background-color: c.$color-btn;
   }
 }
 
 .answer__btn__noAnswer {
-  background-color: #d46a64;
+  background-color: c.$color-Noanswer
 }
 
 .answer__btn__answer {
-  background-color: #00b949;
+  background-color: c.$color-answer;
 }
 
 
 
 .answer__desk {
   width: 50%;
-  background-color: $color-itemn;
+  background-color: c.$color-itemn;
   border-radius: 5px;
 }
 
 .answer__deskBird {
   width: 80%;
   padding: 30px;
-  @include  media-modale-answer {
+  @include  m.media-modale-answer {
     padding: 10px;
   }
 }
 
 .bird__img-answer  {
-  @include media-modale-answer-big {
+  @include m.media-modale-answer-big {
     width: 130px;
     height: 130px;
   }
-  @include media-modaleSmall {
+  @include m.media-modaleSmall {
     width: 100px;
     height: 100px
   }
-  @include media-small {
+  @include m.media-small {
     width: 70px;
     height: 70px
   }
@@ -106,19 +101,27 @@
 .answer__next {
   width: 100%;
   padding: 20px 15px;
-  color: black;
+  color: c.$color-btn-text;
   font-size: 2.5rem;
   line-height: 1.8rem;
   border-radius: 5px;
-  background: #e0ccc3;
+  background: c.$color-answer-next;
   outline: none;
   border: 0;
   cursor: pointer;
   transition: 0.4s all;
 };
 
+.answer__next:hover {
+  background-color:  c.$color-hover-answer;
+  transition: 0.4s all;
+  @include m.media-taplet-gallery {
+    background: c.$color-answer-next;
+  }
+}
+
 .answer__next__active {
-  border: 2px solid red;
+  border: 2px solid c.$color-answer-active;
 };
 
 //result start
@@ -132,7 +135,7 @@
   height: 100vh;
   top: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.7);
+  background: c.$color-resuit;
 }
 
 .result__active {
@@ -147,22 +150,22 @@
   padding: 25px 10px;
   top: 50%;
   left: 40%;
-  background: #ffffff;
+  background: c.$color-result-body;
   border-radius: 5px;
-  @include media-tablet-result-big {
+  @include m.media-tablet-result-big {
     top: 30%;
     left: 20%;
   }
-  @include media-tablet-result {
+  @include m.media-tablet-result {
     top: 30%;
     left: 12%;
   }
-  @include media-tablet-result-small {
+  @include m.media-tablet-result-small {
     top: 30%;
     left: 8%;
     width: 250px;
   }
-  @include media-mobale-result-big {
+  @include m.media-mobale-result-big {
     top: 30%;
     left: 5%;
     width: 200px;
@@ -174,23 +177,23 @@
   text-align: center;
   font-size: 2.0rem;
   font-weight: 600;
-  color: $color-footer;
+  color: c.$color-footer;
 }
 
 .result__btn {
   margin-left: 30%;
   margin-bottom: 20px;
   padding: 10px 15px;
-  color: black;
+  color: c.$color-btn-text;
   font-size: 1.8rem;
   line-height: 1.8rem;
   border-radius: 5px;
-  background-color: $color-gvis;
+  background-color: c.$color-gvis;
   text-transform: uppercase;
   outline: none;
   border: 0;
   cursor: pointer;
-  @include media-mobale-result-big {
+  @include m.media-mobale-result-big {
     margin-left: 22%;
   }
 }
