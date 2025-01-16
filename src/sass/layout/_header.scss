@@ -56,16 +56,3 @@
   }
 }
 
-.header__btns, .header__languages {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 0 15px;
-  @include m.media-desktop {
-    flex-direction: column;
-    gap: 30px 30px
-  }
-  @include m.media-mobale-small {
-    gap: 5px 0px;
-  }
-}
