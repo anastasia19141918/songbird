@@ -1,14 +1,17 @@
+@use '../abstract/constans' as s;
+@use '../abstract/mixin' as m;
+
 .header-gallery__link {
   text-decoration: none;
   text-transform: uppercase;
   font-size: 2.0rem;
   font-weight: 600;
-  color: $color-text;
+  color: s.$color-text;
   transition: .3s all;
-  @include media-desktop-gallery-small {
+  @include m.media-desktop-gallery-small {
     font-size: 1.8rem;
   }
-  @include media-taplet-gallery-small {
+  @include m.media-taplet-gallery-small {
     margin-top: 20px;
     font-size: 1.8rem;
   }
@@ -17,7 +20,7 @@
 .header-gallery__link:hover {
   transform: scale(1.2);
   transition: .3s all;
-  @include media-taplet-gallery-big {
+  @include m.media-taplet-gallery-big {
     transform: none;
   }
 }
@@ -26,7 +29,7 @@
 
 .gallery {
   padding: 120px 0px 20px;
-  @include media-mabale-gallery-small {
+  @include m.media-mabale-gallery-small {
     padding: 30px 0px 20px;
   }
 }
@@ -36,16 +39,16 @@
   flex-direction: row;
   justify-content: center;
   gap: 0 25px;
-  @include media-mabale-gallery-big  {
+  @include m.media-mabale-gallery-big  {
     padding: 0 30px;
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 20px 0px;
   }
-  @include media-mabale-gallery-small {
+  @include m.media-mabale-gallery-small {
     gap: 15px 20px;
   }
-  @include media-mabale-gallery {
+  @include m.media-mabale-gallery {
     grid-template-columns: repeat(2,1fr);
   }
 }
@@ -54,36 +57,36 @@
   text-transform: uppercase;
   font-size: 2.2rem;
   font-weight: 600;
-  color: $color-text;
+  color: s.$color-text;
   cursor: pointer;
   transition: .4 all;
-  @include media-desktop-gallery-small {
+  @include m.media-desktop-gallery-small {
     font-size: 1.8rem;
   }
-  @include media-taplet-gallery-small {
+  @include m.media-taplet-gallery-small {
     font-size: 1.4rem;
   }
-  @include media-taplet-gallery {
+  @include m.media-taplet-gallery {
     font-size: 1.2rem;
   }
-  @include media-mabale-gallery-big  {
+  @include m.media-mabale-gallery-big  {
     font-size: 1.5rem;
   }
-  @include media-mabale-gallery-small {
+  @include m.media-mabale-gallery-small {
     font-size: 1.3rem;
   }
 }
 
 .gallery__btn:hover {
-  color: $color-footer;
+  color: s.$color-footer;
   transition: .4 all;
-  @include media-taplet-gallery {
-    color: $color-text;
+  @include m.media-taplet-gallery {
+    color: s.$color-text;
   }
 }
 
 .gallery__btn__active {
-  color: $color-footer;
+  color: s.$color-footer;
 }
 
 
@@ -96,13 +99,13 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px 20px;
-  @include media-mabale-gallery-small {
+  @include m.media-mabale-gallery-small {
     padding: 30px 15px;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     justify-items: center;
   }
-  @include media-mabale-gallery {
+  @include m.media-mabale-gallery {
     padding: 30px 30px;
   }
 }
@@ -110,9 +113,9 @@
 .bird {
   width: 35%;
   padding: 30px;
-  background-color: $color-itemn;
+  background-color: s.$color-itemn;
   border-radius: 10px;
-  @include media-mabale-gallery-small {
+  @include m.media-mabale-gallery-small {
     width: 70%;
   }
 }
@@ -122,7 +125,7 @@
   display: flex;
   flex-direction: row;
   gap: 0 15px;
-  @include media-desktop-gallery {
+  @include m.media-desktop-gallery {
     flex-direction: column;
     gap: 15px 0px;
   }
@@ -133,7 +136,7 @@
   height: 150px;
   border-radius: 10px;
   object-fit: cover;
-  @include media-desktop-gallery {
+  @include m.media-desktop-gallery {
     width: 170px;
     height: 170px;
   }
@@ -143,9 +146,9 @@
   margin: 0 0 5px 0;
   font-size: 1.8rem;
   font-weight: 600;
-  color: $color-text;
+  color: s.$color-text;
   text-transform: uppercase;
-  @include media-mabale-gallery-small {
+  @include m.media-mabale-gallery-small {
     font-size: 1.6rem;
   }
 }
@@ -153,9 +156,9 @@
 .bird__title-small {
   margin-bottom: 20px;
   font-size: 1.8rem;
-  color: $color-text;
+  color: s.$color-text;
   text-transform: uppercase;
-  @include media-mabale-gallery-small {
+  @include m.media-mabale-gallery-small {
     font-size: 1.6rem;
   }
 }
@@ -165,7 +168,7 @@
   margin: 0;
   font-size: 1.6rem;
   font-weight: 500;
-  color: #000000;
+  color: s.$color-btn-text;
   letter-spacing: 1px;
 }
 
@@ -173,7 +176,7 @@
   display: flex;
   flex-direction: row;
   gap: 0 10px;
-  @include media-mabale-gallery-big  {
+  @include m.media-mabale-gallery-big  {
     gap: 0 5px;
   }
 }
@@ -185,7 +188,7 @@
   background-size: 30px 30px;
   background-repeat: no-repeat;
   cursor: pointer;
-  @include media-taplet-gallery-small {
+  @include m.media-taplet-gallery-small {
     width: 20px;
     height: 20px;
     background-size: 20px 20px;
@@ -199,7 +202,7 @@
   background-size: 30px 30px;
   background-repeat: no-repeat;
   cursor: pointer;
-  @include media-taplet-gallery-small {
+  @include m.media-taplet-gallery-small {
     width: 20px;
     height: 20px;
     background-size: 20px 20px;
@@ -215,19 +218,19 @@
   height: 5px;
   margin-bottom: 20px;
   display: flex;
-  background-color: #ffffff;
+  background-color: s.$color-progress-bar;
   border-radius: 5px;
   cursor: pointer;
-  @include media-taplet-gallery-small {
+  @include m.media-taplet-gallery-small {
     width: 250px;
   }
-  @include media-taplet-gallery {
+  @include m.media-taplet-gallery {
     width: 200px;
   }
-  @include media-mabale-gallery-big  {
+  @include m.media-mabale-gallery-big  {
     width: 150px;
   }
-  @include media-mabale-gallery {
+  @include m.media-mabale-gallery {
     width: 120px;
   }
 }
@@ -238,7 +241,7 @@
   
   border-radius: 10px;
   cursor: pointer;
-  background-color: #df8d31;
+  background-color: s.$color-progress-range;
 }
 
 .progressBar__time {
@@ -250,7 +253,7 @@
 .progressBar__current-time,
 .progressBar__lenght-time {
   font-size: 1.4rem;
-  color: $color-text;
+  color: s.$color-text;
 }
 
 //saund 
@@ -300,6 +303,6 @@
   height: 10px;
   border-radius: 50%;
   -webkit-appearance: none;
-  background: $color-footer;
+  background: s.$color-footer;
   cursor: pointer;
 }

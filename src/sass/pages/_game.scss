@@ -1,6 +1,9 @@
+@use '../abstract/constans' as c;
+@use '../abstract/mixin' as m;
+
 .game {
   padding: 0 30px;
-  @include media-modale-answer {
+  @include m.media-modale-answer {
    padding: 0 10px;
   }
 }
@@ -14,9 +17,9 @@
   margin-bottom: 60px;
   font-size: 2.8rem;
   font-weight: 600;
-  color: $color-footer;
+  color: c.$color-footer;
   text-align: right;
-  @include media-modale-game-small {
+  @include m.media-modale-game-small {
     font-size: 2.0rem;
   }
 }
@@ -27,10 +30,10 @@
   flex-direction: row;
   justify-content:space-between;
   gap: 0 30px;
-  @include media-tablet-game-big {
+  @include m.media-tablet-game-big {
     gap: 0 4px;
   }
-  @include media-small {
+  @include m.media-small {
     flex-direction: column;
     gap: 5px 0;
   }
@@ -38,39 +41,39 @@
 
 .game__btn {
   font-size: 2.0rem;
-  color: black;
-  background-color: $color-itemn;
+  color: c.$color-btn-text;
+  background-color: c.$color-itemn;
   padding: 20px 60px;
   border-radius: 3px;
-  @include media-desktop-game {
+  @include m.media-desktop-game {
     padding: 20px 30px;
   }
-  @include media-tablet-game-big {
+  @include m.media-tablet-game-big {
     padding: 20px 40px;
     font-size: 1.7rem;
   }
-  @include media-taplet-gallery-big {
+  @include m.media-taplet-gallery-big {
     font-size: 1.4rem;
     font-weight: 600;
   }
-  @include media-taplet-gallery-small {
+  @include m.media-taplet-gallery-small {
     padding: 20px 20px;
   }
-  @include media-modale-game-big {
+  @include m.media-modale-game-big {
     padding: 20px 10px;
     font-size: 1.2rem;
   }
-  @include media-modale-game {
+  @include m.media-modale-game {
     padding: 5px 6px;
   }
-  @include media-modale-answer {
+  @include m.media-modale-answer {
     padding: 5px 4px;
     font-size: 1.0rem;
   }
-  @include media-modale-answer-small {
+  @include m.media-modale-answer-small {
     padding: 5px 2px;
   }
-  @include media-small {
+  @include m.media-small {
     padding: 10px 10px;
     text-align: center;
     font-size: 1.3rem;
@@ -78,7 +81,7 @@
 }
 
 .game__btn__active {
-  background: $color-footer;
+  background: c.$color-footer;
 }
 
 // block question start 
@@ -91,18 +94,18 @@
   gap: 0 30px;
   margin-bottom: 20px;
 
-  background-color: $color-itemn;
+  background-color: c.$color-itemn;
   border-radius: 5px;
-  @include media-modale-answer-big {
+  @include m.media-modale-answer-big {
     padding: 15px;
     gap: 0 20px;
   }
-  @include media-modaleSmall {
+  @include m.media-modaleSmall {
     padding: 10px;
     flex-direction: column;
     align-items: center;
   }
-  @include media-small {
+  @include m.media-small {
     gap: 20px 0px;
   }
 }
@@ -116,9 +119,9 @@
   margin: 0 0 5px 0;
   font-size: 3.0rem;
   font-weight: 600;
-  color: black;
+  color: c.$color-btn-text;
   text-transform: uppercase;
-  @include media-modaleSmall {
+  @include m.media-modaleSmall {
     font-size: 1.5rem;
   }
 }
@@ -155,43 +158,43 @@
   height: 5px;
   margin-bottom: 20px;
   display: flex;
-  background-color: #ffffff;
+  background-color: c.$color-progress-bar;
   border-radius: 5px;
   cursor: pointer;
-  @include media-desktop-game {
+  @include m.media-desktop-game {
     width: 1000px;
   }
-  @include media-desktop-gallery {
+  @include m.media-desktop-gallery {
     width: 900px;
   }
-  @include media-desktop-game-small {
+  @include m.media-desktop-game-small {
     width: 800px;
   }
-  @include media-tablet-game-big {
+  @include m.media-tablet-game-big {
     width: 600px;
   }
-  @include media-taplet-gallery-big {
+  @include m.media-taplet-gallery-big {
     width: 550px;
   }
-  @include media-taplet-gallery-small {
+  @include m.media-taplet-gallery-small {
     width: 500px;
   }
-  @include media-taplet-gallery-small {
+  @include m.media-taplet-gallery-small {
       width: 400px;
   }
-  @include media-modale-game-big {
+  @include m.media-modale-game-big {
     width: 280px;
   }
-  @include media-modale-game-small {
+  @include m.media-modale-game-small {
     width: 180px;
   }
-  @include media-modale-game {
+  @include m.media-modale-game {
     width: 120px;
   }
-  @include  media-modale-answer {
+  @include  m.media-modale-answer {
     width: 100px;
   }
-  @include media-modale-answer-small {
+  @include m.media-modale-answer-small {
     width: 60px;
   }
 }
@@ -202,7 +205,7 @@
   
   border-radius: 10px;
   cursor: pointer;
-  background-color: #df8d31;
+  background-color: c.$color-progress-range;
 }
 
 .game__question-time {
@@ -214,7 +217,7 @@
 .game__question-current-time,
 .game__question-current-length {
   font-size: 1.4rem;
-  color: $color-text;
+  color: c.$color-text;
 }
 
 .game__question-sound {
@@ -244,10 +247,10 @@
 .game__question-sounProgressBar {
   width: 120px;
   margin-top: 5px;
-  @include  media-modale-answer {
+  @include  m.media-modale-answer {
     width: 100px;
   }
-  @include media-modale-answer-small {
+  @include m.media-modale-answer-small {
     width: 60px;
   }
 }
@@ -268,7 +271,7 @@
   height: 10px;
   border-radius: 50%;
   -webkit-appearance: none;
-  background: $color-footer;
+  background: c.$color-footer;
   cursor: pointer;
 }
 

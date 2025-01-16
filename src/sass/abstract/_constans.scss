@@ -6,44 +6,27 @@ $color-text: #ffffff;
 $color-footer: #df8d31;
 $color-btn: #F4E2CC;
 $color-itemn: #025959;
+$color-bg: #524656;
+$color-btn-text: #000000;
+$color-hover: #ecca58;
 
+$color-resuit: rgba(0, 0, 0, 0.7);
+$color-result-body: #ffffff;
+
+//color progress bar
+$color-progress-bar: #ffffff;
+$color-progress-range: #df8d31;
+
+//answer color
+$color-hover-answer: #9fd8ff;
+$color-answer: #00b949;
+$color-Noanswer: #d46a64;
+$color-answer-next:#e0ccc3;
+$color-answer-active: red;
+
+//img gviz
+$color-img-gviz: #025959;
+$color-img-gviz-border: #F29727;
 
 $content-width:1440px;
 
-//media
-
-$media-desktop: 1052px;
-$media-taplet: 767px;
-$media-mobale-big: 475px;
-$media-mobale: 376px;
-$media-mobale-small: 276px;
-
-//media gallery
-$media-desktop-gallery: 1348px;
-$media-desktop-gallery-small: 1120px;
-$media-taplet-gallery-big: 1055px;
-$media-taplet-gallery-small: 959px;
-$media-taplet-gallery: 812px;
-$media-mabale-gallery-big: 676px;
-$media-mabale-gallery-small: 515px;
-$media-mabale-gallery: 297px;
-
-//media game 
-$media-desktop-game: 1435px;
-$media-desktop-game-small: 1232px;
-$media-tablet-game-big: 1137px;
-$media-tablet-game: 836px;
-$media-modale-game-big: 735px;
-$media-modale-game-small: 613px;
-$media-modale-game: 540px;
-$media-modale-answer: 484px;
-$media-modale-answer-big: 433px;
-$media-modale-answer-small: 392px;
-$media-modaleSmall: 360px;
-$media-small: 300px;
-
-//result start
-$media-tablet-result-big: 577px;
-$media-tablet-result: 429px;
-$media-tablet-result-small: 383px;
-$media-mobale-result-big: 313px;

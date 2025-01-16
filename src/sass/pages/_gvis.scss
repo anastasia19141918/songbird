@@ -1,12 +1,16 @@
+
+@use '../abstract/constans' as c;
+@use '../abstract/mixin' as m;
+
 .quiz {
-  padding: 120px 0px 50px 0px;
-  @include media-desktop {
+  padding: 0px 0px 50px 0px;
+  @include m.media-desktop {
     padding: 120px 30px 50px 30px;
   }
-  @include media-taplet {
+  @include m.media-taplet {
     padding: 30px 30px 50px 30px;
    }
-   @include media-mobale-small {
+   @include m.media-mobale-small {
     padding: 15px;
   }
 }
@@ -15,35 +19,41 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  @include media-taplet {
+
+  @include m.media-taplet-gallery-small {
+    gap: 20px 20px;
+  }
+  
+  @include m.media-taplet {
    flex-direction: column;
-   gap: 20px 0px;
+    gap: 20px 0px;
   }
 }
 
 .quiz__imgs {
   width: 420px;
   height: 480px;
-  background-color: #025959;
+  background-color: c.$color-img-gviz;
   background-image: url('../../src/img/icon-birds.png');
   background-size: 420px 480px;
   background-repeat: no-repeat;
-  border: 6px solid #F29727;
-  @include media-taplet {
+  border: 6px solid c.$color-img-gviz-border;
+  border-radius: 10px;
+  @include m.media-taplet {
     margin: auto;
   }
   
-  @include media-mobale-big {
+  @include m.media-mobale-big {
     width: 280px;
     height: 320px;
     background-size: 280px 320px;
   }
-  @include media-mobale {
+  @include m.media-mobale {
     width: 220px;
     height: 220px;
     background-size: 220px 220px;
   }
-  @include media-mobale-small {
+  @include m.media-mobale-small {
     width: 150px;
     height: 150px;
     background-size: 150px 150px;
@@ -53,27 +63,41 @@
 .quiz__desk {
   width: 400px;
   align-self: center;
-  @include media-mobale {
+  @include m.media-mobale {
     width: 250px;
   }
-  @include media-mobale-small {
+  @include m.media-mobale-small {
     width: 180px;
   }
 }
 
 .quiz__text {
-  margin: 0;
-  font-size: 3.0rem;
+  margin: 0 0 20px 0;
+  font-size: 3.5rem;
   font-weight: 600;
-  color: $color-text-guiz;
+  color: c.$color-text-guiz;
   text-transform: uppercase;
-  @include media-mobale-big {
+  @include m.media-mobale-big {
     font-size: 2.0rem;
   }
-  @include media-mobale-big {
+  @include m.media-mobale-big {
     text-align: center;
   }
-  @include media-mobale-small {
+  @include m.media-mobale-small {
     font-size: 1.5rem;
+  }
+};
+
+.quiz__btns {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px 0px;
+  @include m.media-desktop {
+    flex-direction: column;
+    gap: 30px 30px
+  }
+  @include m.media-mobale-small {
+    gap: 5px 0px;
   }
 }

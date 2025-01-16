@@ -1,7 +1,9 @@
+@use '../abstract/constans' as c;
+
 html {
   font-size: 10px;
 }
 
 body {
-  background-color: #524656;
+  background-color: c.$color-bg;
 }
